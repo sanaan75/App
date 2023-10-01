@@ -1,4 +1,4 @@
-﻿namespace Research.Entities;
+﻿namespace Entities;
 
 public class EntitiesDummy
 {

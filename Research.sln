@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Research", "Research\Research.csproj", "{0EAA3049-2B6A-4888-B79D-AC14CE51B89E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{162F8D09-2C0F-42E0-B0FF-5A191B08E0A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{4C01784E-2DEB-4B89-AA8E-5710D56CBACA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{0EAA3049-2B6A-4888-B79D-AC14CE51B89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EAA3049-2B6A-4888-B79D-AC14CE51B89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EAA3049-2B6A-4888-B79D-AC14CE51B89E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{162F8D09-2C0F-42E0-B0FF-5A191B08E0A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{162F8D09-2C0F-42E0-B0FF-5A191B08E0A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{162F8D09-2C0F-42E0-B0FF-5A191B08E0A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{162F8D09-2C0F-42E0-B0FF-5A191B08E0A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C01784E-2DEB-4B89-AA8E-5710D56CBACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C01784E-2DEB-4B89-AA8E-5710D56CBACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C01784E-2DEB-4B89-AA8E-5710D56CBACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C01784E-2DEB-4B89-AA8E-5710D56CBACA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

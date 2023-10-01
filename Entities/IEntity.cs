@@ -1,4 +1,4 @@
-﻿namespace Research.Abstractions;
+﻿namespace Entities;
 
 public interface IEntity
 {

@@ -1,5 +1,5 @@
-﻿using Research.DB;
-using Research.Entities;
+﻿using Entities;
+using Persistence;
 using Research.Utilities;
 
 namespace Research;
@@ -7,28 +7,30 @@ namespace Research;
 public partial class MainPage : ContentPage
 {
     private readonly IRepository _db;
-
-
+    
     public MainPage(IRepository db)
     {
         _db = db;
         InitializeComponent();
     }
 
+    public MainPage()
+    {
+    }
+
     private void OnCounterClicked(object sender, EventArgs e)
     {
         try
         {
-            var items = _db.GetQuery<Person>();
-            _db.Add<Person>(new Person
+            var items = _db.Query<Person>();
+            _db.Set<Person>().Add(new Person
             {
                 Name = RandomHelper.StringRandom(6),
-                BirthDate = DateTime.Now.AddYears(-1 * RandomHelper.RandomNumber(15, 50))
+                Username = "user" + RandomHelper.RandomNumber(1, 1000),
+                Password = "pass"
             });
+            _db.Save();
             PersonList.ItemsSource = items.ToList();
-            var d = items.Where(i => i.Id > 4).ToList();
-            var f = items.GroupBy(i => i.Name).Count();
-            var xx = Costants.DbPath;
         }
         catch (Exception ex)
         {
