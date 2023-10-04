@@ -14,7 +14,7 @@ public static class RandomHelper
     {
         random = new Random();
 
-        String b = "abcdefghijklmnopqrstuvwxyz0123456789";
+        String b = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         string result = "";
 

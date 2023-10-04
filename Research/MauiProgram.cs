@@ -17,11 +17,11 @@ public static class MauiProgram
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                fonts.AddFont("Samim.ttf", "Samim");
+                fonts.AddFont("IranianSans.ttf", "IranianSans");
             });
 
-#if DEBUG
         builder.Logging.AddDebug();
-#endif
 
         builder.Services.RegisterAssemblyPublicNonGenericClasses(GetAssembliesToBeRegisteredInIocContainer())
             .AsPublicImplementedInterfaces(ServiceLifetime.Scoped);

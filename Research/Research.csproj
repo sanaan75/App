@@ -84,7 +84,14 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="AutoTasks\" />
       <Folder Include="Db\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <MauiXaml Update="Resources\Styles\EntryStyle.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
     </ItemGroup>
 
     <!-- Build Properties must be defined within these property groups to ensure successful publishing

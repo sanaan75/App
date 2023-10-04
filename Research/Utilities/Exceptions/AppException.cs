@@ -1,4 +1,4 @@
-namespace Entities.Utilities.Exceptions;
+namespace Research.Utilities.Exceptions;
 
 public class AppException : Exception
 {

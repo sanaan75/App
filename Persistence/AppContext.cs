@@ -3,10 +3,11 @@ using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
+using Services;
 
 namespace Persistence;
 
-public class AppContext : DbContext, IRepository
+public class AppContext : DbContext, IDb
 {
     public AppContext()
     {

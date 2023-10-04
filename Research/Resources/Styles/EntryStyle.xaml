@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Style x:Key="EntryStyle" TargetType="Entry">
+        <Setter Property="BackgroundColor" Value="{StaticResource Gray200}" />
+
+        <Setter Property="TextColor"
+                Value="{AppThemeBinding Light={StaticResource Black}, Dark={StaticResource Gray100}}" />
+
+        <Setter Property="FontFamily" Value="IranianSans" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="PlaceholderColor"
+                Value="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray100}}" />
+        <Setter Property="MinimumHeightRequest" Value="44" />
+        <Setter Property="MinimumWidthRequest" Value="44" />
+        <Setter Property="VisualStateManager.VisualStateGroups">
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Disabled">
+                        <VisualState.Setters>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

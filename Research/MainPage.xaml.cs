@@ -1,21 +1,17 @@
 ﻿using Entities;
-using Persistence;
 using Research.Utilities;
+using Services;
 
 namespace Research;
 
 public partial class MainPage : ContentPage
 {
-    private readonly IRepository _db;
-    
-    public MainPage(IRepository db)
+    private readonly IDb _db;
+
+    public MainPage(IDb db)
     {
         _db = db;
         InitializeComponent();
-    }
-
-    public MainPage()
-    {
     }
 
     private void OnCounterClicked(object sender, EventArgs e)
@@ -35,5 +31,10 @@ public partial class MainPage : ContentPage
         catch (Exception ex)
         {
         }
+    }
+
+    private async void OnLoginClicked(object sender, EventArgs e)
+    {
+        await DisplayAlert("عنوان پیام", "متن نمونه", "تایید");
     }
 }

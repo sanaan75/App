@@ -2,51 +2,38 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             FlowDirection="RightToLeft"
              x:Class="Research.MainPage">
 
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
-            Padding="30,0"
+            Padding="20,0"
             VerticalOptions="Center">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+            <Entry
+                Style="{StaticResource EntryStyle}"
+                Placeholder="نام کاربری"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center" />
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            <Entry
+                Placeholder="رمز عبور"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                IsPassword="True" />
 
             <Button
-                x:Name="CounterBtn"
+                Style="{StaticResource ButtonStyle}"
+                Text="ورود"
+                Clicked="OnLoginClicked" />
+
+            <Button
                 Text="Click me"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
-            
-            <Button Text="Click Me"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="Center"
-                    Margin="10"
-                    BorderWidth="1"
-                    BorderColor="RoyalBlue"
-                    CornerRadius="10"
-                    
-                    />
-            
             <ListView
                 x:Name="PersonList"
                 VerticalOptions="Center"
@@ -77,7 +64,11 @@
                                        Margin="10" />
 
                                 <Label Grid.Column="3"
-                                       Text="{Binding BirthDate}"
+                                       Text="{Binding Username}"
+                                       Margin="10" />
+
+                                <Label Grid.Column="3"
+                                       Text="{Binding Password}"
                                        Margin="10" />
 
                             </Grid>
@@ -88,6 +79,5 @@
 
         </VerticalStackLayout>
     </ScrollView>
-
 
 </ContentPage>

@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace Persistence;
+namespace Services;
 
-public interface IRepository
+public interface IDb
 {
     DbSet<TEntity> Set<TEntity>() where TEntity : class;
     IQueryable<TEntity> Query<TEntity>() where TEntity : class, IEntity;
